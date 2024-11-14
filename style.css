@@ -1,0 +1,109 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+ html,body{
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background-color: #f4f4f9;
+color: #333;
+font-family: Arial, sans-serif;
+}
+.pricing-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.pricing-card {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    background-color: #673ab7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-header.standard { background-color: #2196f3; }
+.card-header.premium { background-color: #ff9800; }
+
+.card-price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card-price span {
+    font-size: 18px;
+    color: #777;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.card-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.card-features li:last-child {
+    border-bottom: none;
+}
+
+.card-button {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: #673ab7;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #5e35b1;
+}
+
+.card-button.standard { background-color: #2196f3; }
+.card-button.standard:hover { background-color: #1e88e5; }
+
+.card-button.premium { background-color: #ff9800; }
+.card-button.premium:hover { background-color: #fb8c00; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+}
